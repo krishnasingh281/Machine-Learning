@@ -1,0 +1,211 @@
+/* Dark Theme Variables */
+:root {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-tertiary: #2c2c2c;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a9b1;
+  --accent-color: #4da3ff;
+  --border-color: #444;
+  --success-color: #4caf50;
+  --warning-color: #ff9800;
+  --error-color: #f44336;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Ensure full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    height: 600px; /* Set a fixed height for better layout control */
+    background-color: var(--bg-secondary);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    overflow: hidden; /* Prevent content overflow */
+}
+
+/* Left Section Styles */
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: baseline; /* Align items on the baseline */
+    margin-bottom: 2rem;
+}
+
+.fra-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+}
+
+.atlas-text {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.platform-description {
+    font-size: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+/* Right Section Styles */
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.login-form-container {
+    width: 80%;
+    max-width: 400px;
+}
+
+.login-form-container h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.gateway-text {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.forgot-password {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: var(--text-primary);
+}
+
+.login-button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-color);
+    color: var(--text-primary);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #357ac6;
+}
+
+/* Language Switch */
+.language-switch {
+    text-align: center;
+}
+
+.language-switch a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.language-switch a:hover {
+    color: var(--text-primary);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .logo-container {
+        margin-bottom: 1.5rem;
+    }
+
+    .fra-text,
+    .atlas-text {
+        font-size: 2.5rem;
+    }
+
+    .login-form-container {
+        width: 90%;
+    }
+}
